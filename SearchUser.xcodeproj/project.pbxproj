@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84B1D2952EB11185004A49CB /* FavoriteToggleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D2942EB11184004A49CB /* FavoriteToggleController.swift */; };
 		84BD9E5D2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E5B2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld */; };
 		84BD9E5F2EAFB7D700FF6A6E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */; };
 		84BD9E662EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E652EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84B1D2942EB11184004A49CB /* FavoriteToggleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteToggleController.swift; sourceTree = "<group>"; };
 		84BD9E5C2EAFB6CF00FF6A6E /* SearchUser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchUser.xcdatamodel; sourceTree = "<group>"; };
 		84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		84BD9E652EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteStore.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				84E07D822EAA575C00DA10B2 /* UserDetailViewController.swift */,
 				84E07D802EAA573C00DA10B2 /* SearchViewController.swift */,
 				84BD9E672EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift */,
+				84B1D2942EB11184004A49CB /* FavoriteToggleController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				84E07D812EAA573C00DA10B2 /* SearchViewController.swift in Sources */,
 				84E07D632EAA53F400DA10B2 /* AppDelegate.swift in Sources */,
 				84E07D652EAA53F400DA10B2 /* SceneDelegate.swift in Sources */,
+				84B1D2952EB11185004A49CB /* FavoriteToggleController.swift in Sources */,
 				84BD9E5D2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld in Sources */,
 				84E07D7F2EAA572300DA10B2 /* ImageLoader.swift in Sources */,
 				84E07D7B2EAA56D700DA10B2 /* Models.swift in Sources */,
