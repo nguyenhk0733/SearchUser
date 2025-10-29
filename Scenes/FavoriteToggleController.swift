@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-final class SearchViewController: UITableViewController {
+final class FavoriteToggleController: UITableViewController {
 
     struct UserVM {
         let id: Int
