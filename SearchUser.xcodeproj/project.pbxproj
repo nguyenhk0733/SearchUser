@@ -11,7 +11,8 @@
 		84BD9E5D2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E5B2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld */; };
 		84BD9E5F2EAFB7D700FF6A6E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */; };
 		84BD9E662EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E652EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift */; };
-		84BD9E682EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E672EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift */; };
+                84BD9E682EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD9E672EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift */; };
+                84FFB4C52F2A7E3C00C0E6F3 /* FavoriteUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FFB4C42F2A7E3C00C0E6F3 /* FavoriteUser+CoreDataClass.swift */; };
 		84E07D632EAA53F400DA10B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E07D622EAA53F400DA10B2 /* AppDelegate.swift */; };
 		84E07D652EAA53F400DA10B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E07D642EAA53F400DA10B2 /* SceneDelegate.swift */; };
 		84E07D6A2EAA53F400DA10B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E07D682EAA53F400DA10B2 /* Main.storyboard */; };
@@ -27,9 +28,10 @@
 /* Begin PBXFileReference section */
 		84B1D2942EB11184004A49CB /* FavoriteToggleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteToggleController.swift; sourceTree = "<group>"; };
 		84BD9E5C2EAFB6CF00FF6A6E /* SearchUser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchUser.xcdatamodel; sourceTree = "<group>"; };
-		84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		84BD9E652EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteStore.swift; sourceTree = "<group>"; };
-		84BD9E672EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUsersViewController.swift; sourceTree = "<group>"; };
+                84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+                84BD9E652EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteStore.swift; sourceTree = "<group>"; };
+                84BD9E672EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUsersViewController.swift; sourceTree = "<group>"; };
+                84FFB4C42F2A7E3C00C0E6F3 /* FavoriteUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84E07D5F2EAA53F400DA10B2 /* SearchUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E07D622EAA53F400DA10B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E07D642EAA53F400DA10B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,15 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84BD9E5A2EAFB5DB00FF6A6E /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				84BD9E5B2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld */,
-				84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
+                84BD9E5A2EAFB5DB00FF6A6E /* CoreData */ = {
+                        isa = PBXGroup;
+                        children = (
+                                84BD9E5B2EAFB6CF00FF6A6E /* SearchUser.xcdatamodeld */,
+                                84BD9E5E2EAFB7D700FF6A6E /* PersistenceController.swift */,
+                                84FFB4C42F2A7E3C00C0E6F3 /* FavoriteUser+CoreDataClass.swift */,
+                        );
+                        path = CoreData;
+                        sourceTree = "<group>";
+                };
 		84BD9E642EAFB84D00FF6A6E /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +215,11 @@
 		84E07D5B2EAA53F400DA10B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (
-				84BD9E682EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift in Sources */,
-				84BD9E5F2EAFB7D700FF6A6E /* PersistenceController.swift in Sources */,
-				84E07D832EAA575C00DA10B2 /* UserDetailViewController.swift in Sources */,
+                        files = (
+                                84BD9E682EAFBAAB00FF6A6E /* FavoriteUsersViewController.swift in Sources */,
+                                84FFB4C52F2A7E3C00C0E6F3 /* FavoriteUser+CoreDataClass.swift in Sources */,
+                                84BD9E5F2EAFB7D700FF6A6E /* PersistenceController.swift in Sources */,
+                                84E07D832EAA575C00DA10B2 /* UserDetailViewController.swift in Sources */,
 				84BD9E662EAFB87B00FF6A6E /* CoreDataFavoriteStore.swift in Sources */,
 				84E07D812EAA573C00DA10B2 /* SearchViewController.swift in Sources */,
 				84E07D632EAA53F400DA10B2 /* AppDelegate.swift in Sources */,
