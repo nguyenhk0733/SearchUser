@@ -6,7 +6,7 @@ final class SearchViewController: UITableViewController {
     struct UserVM {
         let id: Int
         let login: String
-        let avatarUrl: String
+        let avatarURL: String
     }
 
     private var users: [UserVM] = []
@@ -51,7 +51,7 @@ final class SearchViewController: UITableViewController {
         let pt = sender.convert(.zero, to: tableView)
         guard let indexPath = tableView.indexPathForRow(at: pt) else { return }
         let u = users[indexPath.row]
-        let dto = FavoriteUserDTO(id: Int64(u.id), login: u.login, avatarURL: u.avatarUrl)
+        let dto = FavoriteUserDTO(id: Int64(u.id), login: u.login, avatarURL: u.avatarURL)
 
         if favorites.isFavorite(id: dto.id) {
             try? favorites.remove(id: dto.id)
