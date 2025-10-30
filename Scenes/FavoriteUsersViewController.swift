@@ -28,9 +28,27 @@ final class FavoriteUsersViewController: UITableViewController, NSFetchedResults
         let cell = tv.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
         let u = frc.object(at: indexPath)
         cell.textLabel?.text = u.login
-        cell.detailTextLabel?.text = "ID: \(u.id)"
+        if let addedAt = u.addedAt {
+            let relative = RelativeDateTimeFormatter.favoriteFormatter.localizedString(for: addedAt, relativeTo: Date())
+            cell.detailTextLabel?.text = "Added \(relative)"
+        } else {
+            cell.detailTextLabel?.text = "ID: \(u.id)"
+        }
+        cell.imageView?.image = UIImage(systemName: "person.circle")
+        if let avatar = u.avatarUrl, let url = URL(string: avatar), let imageView = cell.imageView {
+            ImageLoader.shared.load(url, into: imageView)
+        }
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let user = frc.object(at: indexPath)
+        guard let username = user.login, !username.isEmpty,
+              let vc = storyboard?.instantiateViewController(withIdentifier: "UserDetailViewController") as? UserDetailViewController else { return }
+        vc.username = username
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     // (Tuỳ chọn) auto update khi Core Data đổi
@@ -46,4 +64,12 @@ final class FavoriteUsersViewController: UITableViewController, NSFetchedResults
         @unknown default: break
         }
     }
+}
+
+private extension RelativeDateTimeFormatter {
+    static let favoriteFormatter: RelativeDateTimeFormatter = {
+        let fmt = RelativeDateTimeFormatter()
+        fmt.unitsStyle = .full
+        return fmt
+    }()
 }

@@ -17,7 +17,6 @@ final class SearchViewController: UITableViewController {
         title = "GitHub User Search"
 
         // Table config
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UserCell")
         tableView.rowHeight = 64
 
         // Search controller
@@ -29,7 +28,15 @@ final class SearchViewController: UITableViewController {
     }
 
     private func search(query: String, reset: Bool) {
-        guard !query.trimmingCharacters(in: .whitespaces).isEmpty else { return }
+        let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty {
+            if reset {
+                users.removeAll()
+                totalCount = 0
+                tableView.reloadData()
+            }
+            return
+        }
         if isLoading { return }
 
         isLoading = true
@@ -39,7 +46,9 @@ final class SearchViewController: UITableViewController {
             tableView.reloadData()
         }
 
-        GitHubAPI.shared.searchUsers(query: query, page: currentPage, perPage: perPage) { [weak self] result in
+        currentQuery = trimmed
+
+        GitHubAPI.shared.searchUsers(query: trimmed, page: currentPage, perPage: perPage) { [weak self] result in
             guard let self = self else { return }
             self.isLoading = false
             switch result {
@@ -75,8 +84,8 @@ final class SearchViewController: UITableViewController {
         cell.textLabel?.text = u.login
         cell.detailTextLabel?.text = u.html_url
         cell.imageView?.image = UIImage(systemName: "person.circle")
-        if let url = URL(string: u.avatar_url) {
-            ImageLoader.shared.load(url, into: cell.imageView!)
+        if let url = URL(string: u.avatar_url), let imageView = cell.imageView {
+            ImageLoader.shared.load(url, into: imageView)
         }
         cell.accessoryType = .disclosureIndicator
         return cell
@@ -93,8 +102,8 @@ final class SearchViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let threshold = users.count - 5
-        if indexPath.row == threshold, users.count < totalCount, !isLoading, !currentQuery.isEmpty {
+        let isLastRow = indexPath.row == users.count - 1
+        if isLastRow, users.count < totalCount, !isLoading, !currentQuery.isEmpty {
             search(query: currentQuery, reset: false)
         }
     }
