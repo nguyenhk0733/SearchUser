@@ -24,7 +24,7 @@ final class CoreDataFavoriteStore: FavoriteStore {
         let obj = FavoriteUser(context: ctx)
         obj.id = u.id
         obj.login = u.login
-        obj.avatarURL = u.avatarURL
+        obj.avatarUrl = u.avatarURL
         obj.addedAt = Date()
         try ctx.save()
     }
@@ -41,14 +41,7 @@ final class CoreDataFavoriteStore: FavoriteStore {
         let req: NSFetchRequest<FavoriteUser> = FavoriteUser.fetchRequest()
         req.sortDescriptors = [NSSortDescriptor(key: "addedAt", ascending: false)]
         return try ctx.fetch(req).map {
-            .init(id: $0.id, login: $0.login ?? "", avatarURL: $0.avatarURL ?? "")
+            .init(id: $0.id, login: $0.login ?? "", avatarURL: $0.avatarUrl ?? "")
         }
-    }
-}
-
-private extension FavoriteUser {
-    @objc var avatarURL: String? {
-        get { value(forKey: "avatarUrl") as? String }
-        set { setValue(newValue, forKey: "avatarUrl") }
     }
 }
