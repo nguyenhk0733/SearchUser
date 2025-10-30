@@ -1,0 +1,5 @@
+Favorite entity configured with required fields.
+Generated FavoriteUser managed object class.
+CoreData store handles add remove favorites.
+Detail screen toggles favorite state reliably.
+Lists show avatars, subtitles, and navigation.
