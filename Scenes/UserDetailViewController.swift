@@ -91,7 +91,7 @@ final class UserDetailViewController: UIViewController {
                 try favorites.add(dto)
             }
             isFavorite.toggle()
-        } catch let error {
+        } catch {
             showError("Cannot update favorites. \(error.localizedDescription)")
         }
     }
