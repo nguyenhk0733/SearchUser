@@ -48,7 +48,7 @@ final class FavoriteToggleController: UITableViewController {
 
     @objc private func starTapped(_ sender: UIButton) {
         // Tìm indexPath từ vị trí của nút trong bảng
-        let pt = sender.convert(.zero, to: tableView)
+        let pt = sender.convert(CGPoint.zero, to: tableView)
         guard let indexPath = tableView.indexPathForRow(at: pt) else { return }
         let u = users[indexPath.row]
         let dto = FavoriteUserDTO(id: Int64(u.id), login: u.login, avatarURL: u.avatarURL)
