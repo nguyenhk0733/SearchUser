@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--GitHub Users-->
         <scene sceneID="zcD-WZ-LCk">
             <objects>
-                <tableViewController id="wGu-z4-4F5" customClass="SearchViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wGu-z4-4F5" customClass="SearchViewController" customModule="SearchUser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" estimatedRowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qas-4e-Utn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,16 +25,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="person.circle" catalog="system" id="In6-sp-luH">
-                                            <rect key="frame" x="15" y="12" width="40" height="40"/>
+                                            <rect key="frame" x="20.25" y="22.5" width="20" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XwF-Tp-PZq">
-                                            <rect key="frame" x="65" y="13" width="63" height="20.5"/>
+                                            <rect key="frame" x="55.5" y="11" width="84" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="https://github.com/user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="smw-LR-Cg6">
-                                            <rect key="frame" x="65" y="35.5" width="186.5" height="15.5"/>
+                                            <rect key="frame" x="55.5" y="34.5" width="141.5" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
@@ -76,28 +79,30 @@
             </objects>
             <point key="canvasLocation" x="-688" y="28"/>
         </scene>
-        <!--Favorite Users View Controller-->
+        <!--Favorite Users-->
         <scene sceneID="zMn-9b-Ax2">
             <objects>
-                <tableViewController storyboardIdentifier="FavoriteUsersViewController" id="rpr-Bv-vnJ" customClass="FavoriteUsersViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FavoriteUsersViewController" id="rpr-Bv-vnJ" customClass="FavoriteUsersViewController" customModule="SearchUser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="wwE-5x-kdH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" textLabel="utw-eu-I2i" detailTextLabel="F8v-Xu-sP5" style="IBUITableViewCellStyleSubtitle" id="H0W-bW-ejk">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                <rect key="frame" x="20" y="49.5" width="374" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H0W-bW-ejk" id="nPl-IT-3bx">
-                                    <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="345.5" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="favorite login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utw-eu-I2i">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="favorite login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utw-eu-I2i">
+                                            <rect key="frame" x="20" y="9" width="98" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ID: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8v-Xu-sP5">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="ID: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8v-Xu-sP5">
+                                            <rect key="frame" x="20" y="32.5" width="26.5" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
@@ -129,53 +134,53 @@
         <!--User Detail View Controller-->
         <scene sceneID="RiE-oa-DVT">
             <objects>
-                <viewController storyboardIdentifier="UserDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b2e-eZ-5Cj" customClass="UserDetailViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b2e-eZ-5Cj" customClass="UserDetailViewController" customModule="SearchUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r9O-Iz-SAG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gST-7F-qWx">
-                                <rect key="frame" x="16" y="64" width="382" height="530"/>
+                                <rect key="frame" x="16" y="68" width="280.5" height="347"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLL-a7-LgU">
-                                        <rect key="frame" x="131" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280.5" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="CGx-1k-YVP"/>
                                             <constraint firstAttribute="height" constant="120" id="aUj-Pg-61G"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAL-sW-MDf">
-                                        <rect key="frame" x="0.0" y="136" width="382" height="24"/>
+                                        <rect key="frame" x="0.0" y="136" width="280.5" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="name" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-Rp-yhj">
-                                        <rect key="frame" x="0.0" y="176" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="176" width="280.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="👥 0 followers • 0 following • 📂 0 repos" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-Kb-EsM">
-                                        <rect key="frame" x="0.0" y="212.5" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="212.5" width="280.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Bio goes here" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Oe-WO-bwS">
-                                        <rect key="frame" x="0.0" y="268.5" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="246.5" width="280.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="San Francisco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvp-JG-L4n">
-                                        <rect key="frame" x="0.0" y="324.5" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="280.5" width="280.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-zV-ELE">
-                                        <rect key="frame" x="0.0" y="364" width="382" height="44"/>
+                                        <rect key="frame" x="0.0" y="317" width="280.5" height="30"/>
                                         <state key="normal" title="Open on GitHub"/>
                                     </button>
                                 </subviews>
@@ -187,8 +192,8 @@
                         <viewLayoutGuide key="safeArea" id="jQR-gY-qMm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gST-7F-qWx" firstAttribute="leading" secondItem="jQR-gY-qMm" secondAttribute="leading" constant="16" id="luM-iq-6j7"/>
                             <constraint firstItem="jQR-gY-qMm" firstAttribute="trailing" secondItem="gST-7F-qWx" secondAttribute="trailing" constant="16" id="N1n-1a-v8N"/>
+                            <constraint firstItem="gST-7F-qWx" firstAttribute="leading" secondItem="jQR-gY-qMm" secondAttribute="leading" constant="16" id="luM-iq-6j7"/>
                             <constraint firstItem="gST-7F-qWx" firstAttribute="top" secondItem="jQR-gY-qMm" secondAttribute="top" constant="24" id="w3O-6Q-Mzz"/>
                             <constraint firstItem="jQR-gY-qMm" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gST-7F-qWx" secondAttribute="bottom" constant="24" id="xph-fj-61q"/>
                         </constraints>
@@ -212,7 +217,7 @@
     <resources>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.6" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
