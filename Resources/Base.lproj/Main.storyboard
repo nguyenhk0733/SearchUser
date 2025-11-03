@@ -139,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gST-7F-qWx">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gST-7F-qWx">
                                 <rect key="frame" x="16" y="68" width="280.5" height="347"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLL-a7-LgU">
