@@ -24,6 +24,9 @@ final class UserDetailViewController: UIViewController {
         title = username
         avatarImageView.layer.cornerRadius = 60
         avatarImageView.clipsToBounds = true
+        if let stackView = avatarImageView.superview as? UIStackView {
+            stackView.alignment = .center
+        }
         configureFavoriteButton()
         loadDetail()
     }
